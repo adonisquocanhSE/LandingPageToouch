@@ -887,6 +887,12 @@ nav a:hover, nav a.active {
   display: block;
 }
 
+.fpt-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
 .footer-brand {
   display: flex;
   flex-direction: column;
