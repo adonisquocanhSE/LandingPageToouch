@@ -18,20 +18,20 @@ function startCountdown() {
   const timerElement = document.getElementById('countdown-timer');
   if (!timerElement) return;
 
-  // Initial countdown duration set to 71 hours, 58 minutes, 12 seconds
-  const initialDurationMs = ((71 * 3600) + (58 * 60) + 12) * 1000;
+  // Initial countdown duration set to 72 hours
+  const initialDurationMs = 72 * 3600 * 1000;
   
-  let targetTime = localStorage.getItem('toouch_countdown_target');
+  let targetTime = localStorage.getItem('toouch_countdown_target_72h');
   
   if (!targetTime) {
     targetTime = Date.now() + initialDurationMs;
-    localStorage.setItem('toouch_countdown_target', targetTime);
+    localStorage.setItem('toouch_countdown_target_72h', targetTime);
   } else {
     targetTime = parseInt(targetTime, 10);
     // If the timer expired in the past, reset it for simulation/demonstration
     if (targetTime <= Date.now()) {
       targetTime = Date.now() + initialDurationMs;
-      localStorage.setItem('toouch_countdown_target', targetTime);
+      localStorage.setItem('toouch_countdown_target_72h', targetTime);
     }
   }
 

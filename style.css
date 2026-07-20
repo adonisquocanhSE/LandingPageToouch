@@ -324,23 +324,23 @@ nav a:hover, nav a.active {
   border: none;
 }
 
-/* Front Side: Perfume Bottle with Warm Grey Background */
+/* Front Side: Scent Graphic Card */
 .flip-card-front {
-  background-color: #b0a498;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.06);
+  background-color: transparent;
+  display: block;
+  padding: 0;
+  overflow: hidden;
 }
 
-.flip-card-front .bottle-img {
+.flip-card-front .card-front-img {
   width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.18));
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.4s ease;
+}
+
+.flip-card:hover .flip-card-front .card-front-img {
+  transform: scale(1.05);
 }
 
 .flip-card:hover .flip-card-front .bottle-img {
@@ -458,18 +458,13 @@ nav a:hover, nav a.active {
   text-transform: uppercase;
 }
 
-.black-pill-tag {
-  background-color: #000;
-  color: #fff;
-  border-radius: 50px;
-  padding: 3px 22px;
-  font-weight: 600;
-  font-size: 26px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 80px;
-  height: 44px;
+.status-number {
+  font-weight: 800;
+  font-size: 54px;
+  color: #000;
+  margin: 0 8px;
+  font-family: var(--font-main);
+  line-height: 1;
 }
 
 .preorder-img-wrapper {
@@ -845,10 +840,8 @@ nav a:hover, nav a.active {
     font-size: 22px;
   }
   
-  .black-pill-tag {
-    font-size: 20px;
-    min-width: 60px;
-    height: 36px;
+  .status-number {
+    font-size: 36px;
   }
 
   .countdown-timer {
